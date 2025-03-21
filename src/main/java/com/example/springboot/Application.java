@@ -11,15 +11,15 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Application {
 
-  private static boolean showBeans = false;
+    private static boolean showBeans = false;
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
-	@Bean
-	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-		return args -> {
+    @Bean
+    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+        return args -> {
 
       if (showBeans) {
         System.out.println("Let's inspect the beans provided by Spring Boot:");
@@ -32,7 +32,7 @@ public class Application {
         System.out.println("Spring application has been initialized");
       }
 
-		};
-	}
+        };
+    }
 
 }
