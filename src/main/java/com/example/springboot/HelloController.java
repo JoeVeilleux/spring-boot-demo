@@ -10,5 +10,15 @@ public class HelloController {
     public String index() {
         return "Greetings from Spring Boot!";
     }
+    
+    @GetMapping("/data")
+    public MyClass data() {
+    	return new MyClass();
+    }
+    
+    @GetMapping("/book")
+    public Book book() {
+    	return new Book("Moby", "Dick", "1234");
+    }
 
 }
